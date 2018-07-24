@@ -12,10 +12,17 @@
 		A99C9B922106FF3F00C3E9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99C9B902106FF3F00C3E9CF /* LaunchScreen.storyboard */; };
 		A99C9B952106FF3F00C3E9CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9B942106FF3F00C3E9CF /* main.m */; };
 		A99C9B9F2106FF3F00C3E9CF /* quchuxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9B9E2106FF3F00C3E9CF /* quchuxingTests.m */; };
-		A99C9BAD210703A100C3E9CF /* Modules in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BA9210703A100C3E9CF /* Modules */; };
-		A99C9BAE210703A100C3E9CF /* Constant in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BAA210703A100C3E9CF /* Constant */; };
-		A99C9BAF210703A100C3E9CF /* AppDelegate in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BAB210703A100C3E9CF /* AppDelegate */; };
-		A99C9BB0210703A100C3E9CF /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BAC210703A100C3E9CF /* Utils */; };
+		A99C9BC22107076A00C3E9CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BBF2107076A00C3E9CF /* AppDelegate.m */; };
+		A99C9BC82107087100C3E9CF /* AppDelegate+LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BC72107087100C3E9CF /* AppDelegate+LaunchView.m */; };
+		A99C9BCB210708C300C3E9CF /* AppDelegate+Libs.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BCA210708C300C3E9CF /* AppDelegate+Libs.m */; };
+		A99C9BD42107097500C3E9CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BD32107097500C3E9CF /* AppDelegate.m */; };
+		A99C9BD72107097500C3E9CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BD62107097500C3E9CF /* ViewController.m */; };
+		A99C9BDA2107097500C3E9CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BD82107097500C3E9CF /* Main.storyboard */; };
+		A99C9BDC2107097700C3E9CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BDB2107097700C3E9CF /* Assets.xcassets */; };
+		A99C9BDF2107097700C3E9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BDD2107097700C3E9CF /* LaunchScreen.storyboard */; };
+		A99C9BE22107097700C3E9CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BE12107097700C3E9CF /* main.m */; };
+		A99C9BEC2107097700C3E9CF /* quchuxing_debugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BEB2107097700C3E9CF /* quchuxing_debugTests.m */; };
+		CD007984115E1FDD13A73426 /* libPods-quchuxing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79139E3C939EBCAFAFF27459 /* libPods-quchuxing.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +33,18 @@
 			remoteGlobalIDString = A99C9B812106FF3D00C3E9CF;
 			remoteInfo = quchuxing;
 		};
+		A99C9BE82107097700C3E9CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A99C9B7A2106FF3D00C3E9CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A99C9BCF2107097500C3E9CF;
+			remoteInfo = quchuxing_debug;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79139E3C939EBCAFAFF27459 /* libPods-quchuxing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-quchuxing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C296735412A912A2E6E897F /* Pods-quchuxing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quchuxing.release.xcconfig"; path = "Pods/Target Support Files/Pods-quchuxing/Pods-quchuxing.release.xcconfig"; sourceTree = "<group>"; };
 		A99C9B822106FF3D00C3E9CF /* quchuxing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quchuxing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99C9B8C2106FF3D00C3E9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A99C9B8E2106FF3F00C3E9CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,10 +54,30 @@
 		A99C9B9A2106FF3F00C3E9CF /* quchuxingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quchuxingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99C9B9E2106FF3F00C3E9CF /* quchuxingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quchuxingTests.m; sourceTree = "<group>"; };
 		A99C9BA02106FF3F00C3E9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A99C9BA9210703A100C3E9CF /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Modules; sourceTree = "<group>"; };
-		A99C9BAA210703A100C3E9CF /* Constant */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constant; sourceTree = "<group>"; };
-		A99C9BAB210703A100C3E9CF /* AppDelegate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppDelegate; sourceTree = "<group>"; };
-		A99C9BAC210703A100C3E9CF /* Utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utils; sourceTree = "<group>"; };
+		A99C9BBE2107076A00C3E9CF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A99C9BBF2107076A00C3E9CF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A99C9BC62107087100C3E9CF /* AppDelegate+LaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LaunchView.h"; sourceTree = "<group>"; };
+		A99C9BC72107087100C3E9CF /* AppDelegate+LaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LaunchView.m"; sourceTree = "<group>"; };
+		A99C9BC9210708C300C3E9CF /* AppDelegate+Libs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Libs.h"; sourceTree = "<group>"; };
+		A99C9BCA210708C300C3E9CF /* AppDelegate+Libs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Libs.m"; sourceTree = "<group>"; };
+		A99C9BD02107097500C3E9CF /* quchuxing_debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quchuxing_debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99C9BD22107097500C3E9CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A99C9BD32107097500C3E9CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A99C9BD52107097500C3E9CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A99C9BD62107097500C3E9CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A99C9BD92107097500C3E9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A99C9BDB2107097700C3E9CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A99C9BDE2107097700C3E9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A99C9BE02107097700C3E9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99C9BE12107097700C3E9CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A99C9BE72107097700C3E9CF /* quchuxing_debugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quchuxing_debugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99C9BEB2107097700C3E9CF /* quchuxing_debugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quchuxing_debugTests.m; sourceTree = "<group>"; };
+		A99C9BED2107097700C3E9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99C9BF721072D2700C3E9CF /* Urls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Urls.h; sourceTree = "<group>"; };
+		A99C9BFD2107380700C3E9CF /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		A99C9BFE2107382D00C3E9CF /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		A99C9C012107387100C3E9CF /* Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		F3DC38ABD82AD3B0A7794AA9 /* Pods-quchuxing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quchuxing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quchuxing/Pods-quchuxing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD007984115E1FDD13A73426 /* libPods-quchuxing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,15 +96,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A99C9BCD2107097500C3E9CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99C9BE42107097700C3E9CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FE13CFD4F383509326BDE95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC38ABD82AD3B0A7794AA9 /* Pods-quchuxing.debug.xcconfig */,
+				8C296735412A912A2E6E897F /* Pods-quchuxing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A99C9B792106FF3D00C3E9CF = {
 			isa = PBXGroup;
 			children = (
 				A99C9B842106FF3D00C3E9CF /* quchuxing */,
 				A99C9B9D2106FF3F00C3E9CF /* quchuxingTests */,
+				A99C9BD12107097500C3E9CF /* quchuxing_debug */,
+				A99C9BEA2107097700C3E9CF /* quchuxing_debugTests */,
 				A99C9B832106FF3D00C3E9CF /* Products */,
+				5FE13CFD4F383509326BDE95 /* Pods */,
+				B07E76FF564E86756465AF81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +140,8 @@
 			children = (
 				A99C9B822106FF3D00C3E9CF /* quchuxing.app */,
 				A99C9B9A2106FF3F00C3E9CF /* quchuxingTests.xctest */,
+				A99C9BD02107097500C3E9CF /* quchuxing_debug.app */,
+				A99C9BE72107097700C3E9CF /* quchuxing_debugTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,10 +149,11 @@
 		A99C9B842106FF3D00C3E9CF /* quchuxing */ = {
 			isa = PBXGroup;
 			children = (
-				A99C9BAB210703A100C3E9CF /* AppDelegate */,
-				A99C9BAA210703A100C3E9CF /* Constant */,
-				A99C9BA9210703A100C3E9CF /* Modules */,
-				A99C9BAC210703A100C3E9CF /* Utils */,
+				A99C9BBB2107076900C3E9CF /* Libs */,
+				A99C9BC02107076A00C3E9CF /* Utils */,
+				A99C9BBC2107076900C3E9CF /* Constant */,
+				A99C9BB52107076900C3E9CF /* Modules */,
+				A99C9BBD2107076A00C3E9CF /* AppDelegate */,
 				A99C9B8B2106FF3D00C3E9CF /* Main.storyboard */,
 				A99C9B8E2106FF3F00C3E9CF /* Assets.xcassets */,
 				A99C9B902106FF3F00C3E9CF /* LaunchScreen.storyboard */,
@@ -105,6 +172,132 @@
 			path = quchuxingTests;
 			sourceTree = "<group>";
 		};
+		A99C9BB52107076900C3E9CF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9BB62107076900C3E9CF /* Home */,
+				A99C9BB72107076900C3E9CF /* Attention */,
+				A99C9BB82107076900C3E9CF /* Discover */,
+				A99C9BB92107076900C3E9CF /* UserCenter */,
+				A99C9BBA2107076900C3E9CF /* Message */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A99C9BB62107076900C3E9CF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A99C9BB72107076900C3E9CF /* Attention */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Attention;
+			sourceTree = "<group>";
+		};
+		A99C9BB82107076900C3E9CF /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		A99C9BB92107076900C3E9CF /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		A99C9BBA2107076900C3E9CF /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A99C9BBB2107076900C3E9CF /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		A99C9BBC2107076900C3E9CF /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9BFD2107380700C3E9CF /* Prefix.h */,
+				A99C9BFE2107382D00C3E9CF /* Notifications.h */,
+				A99C9C012107387100C3E9CF /* Enums.h */,
+				A99C9BF721072D2700C3E9CF /* Urls.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		A99C9BBD2107076A00C3E9CF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9BBE2107076A00C3E9CF /* AppDelegate.h */,
+				A99C9BBF2107076A00C3E9CF /* AppDelegate.m */,
+				A99C9BC62107087100C3E9CF /* AppDelegate+LaunchView.h */,
+				A99C9BC72107087100C3E9CF /* AppDelegate+LaunchView.m */,
+				A99C9BC9210708C300C3E9CF /* AppDelegate+Libs.h */,
+				A99C9BCA210708C300C3E9CF /* AppDelegate+Libs.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A99C9BC02107076A00C3E9CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9BC12107076A00C3E9CF /* APITool */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A99C9BC12107076A00C3E9CF /* APITool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APITool;
+			sourceTree = "<group>";
+		};
+		A99C9BD12107097500C3E9CF /* quchuxing_debug */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9BD22107097500C3E9CF /* AppDelegate.h */,
+				A99C9BD32107097500C3E9CF /* AppDelegate.m */,
+				A99C9BD52107097500C3E9CF /* ViewController.h */,
+				A99C9BD62107097500C3E9CF /* ViewController.m */,
+				A99C9BD82107097500C3E9CF /* Main.storyboard */,
+				A99C9BDB2107097700C3E9CF /* Assets.xcassets */,
+				A99C9BDD2107097700C3E9CF /* LaunchScreen.storyboard */,
+				A99C9BE02107097700C3E9CF /* Info.plist */,
+				A99C9BE12107097700C3E9CF /* main.m */,
+			);
+			path = quchuxing_debug;
+			sourceTree = "<group>";
+		};
+		A99C9BEA2107097700C3E9CF /* quchuxing_debugTests */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9BEB2107097700C3E9CF /* quchuxing_debugTests.m */,
+				A99C9BED2107097700C3E9CF /* Info.plist */,
+			);
+			path = quchuxing_debugTests;
+			sourceTree = "<group>";
+		};
+		B07E76FF564E86756465AF81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79139E3C939EBCAFAFF27459 /* libPods-quchuxing.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A99C9BA32106FF3F00C3E9CF /* Build configuration list for PBXNativeTarget "quchuxing" */;
 			buildPhases = (
+				DDB2514213F2E78985777694 /* [CP] Check Pods Manifest.lock */,
 				A99C9B7E2106FF3D00C3E9CF /* Sources */,
 				A99C9B7F2106FF3D00C3E9CF /* Frameworks */,
 				A99C9B802106FF3D00C3E9CF /* Resources */,
+				31D953BB2FDCAE27110D97B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +338,41 @@
 			productReference = A99C9B9A2106FF3F00C3E9CF /* quchuxingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A99C9BCF2107097500C3E9CF /* quchuxing_debug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99C9BEE2107097700C3E9CF /* Build configuration list for PBXNativeTarget "quchuxing_debug" */;
+			buildPhases = (
+				A99C9BCC2107097500C3E9CF /* Sources */,
+				A99C9BCD2107097500C3E9CF /* Frameworks */,
+				A99C9BCE2107097500C3E9CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quchuxing_debug;
+			productName = quchuxing_debug;
+			productReference = A99C9BD02107097500C3E9CF /* quchuxing_debug.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A99C9BE62107097700C3E9CF /* quchuxing_debugTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99C9BF12107097700C3E9CF /* Build configuration list for PBXNativeTarget "quchuxing_debugTests" */;
+			buildPhases = (
+				A99C9BE32107097700C3E9CF /* Sources */,
+				A99C9BE42107097700C3E9CF /* Frameworks */,
+				A99C9BE52107097700C3E9CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A99C9BE92107097700C3E9CF /* PBXTargetDependency */,
+			);
+			name = quchuxing_debugTests;
+			productName = quchuxing_debugTests;
+			productReference = A99C9BE72107097700C3E9CF /* quchuxing_debugTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +388,13 @@
 					A99C9B992106FF3F00C3E9CF = {
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = A99C9B812106FF3D00C3E9CF;
+					};
+					A99C9BCF2107097500C3E9CF = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					A99C9BE62107097700C3E9CF = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = A99C9BCF2107097500C3E9CF;
 					};
 				};
 			};
@@ -176,6 +413,8 @@
 			targets = (
 				A99C9B812106FF3D00C3E9CF /* quchuxing */,
 				A99C9B992106FF3F00C3E9CF /* quchuxingTests */,
+				A99C9BCF2107097500C3E9CF /* quchuxing_debug */,
+				A99C9BE62107097700C3E9CF /* quchuxing_debugTests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,13 +424,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99C9BAD210703A100C3E9CF /* Modules in Resources */,
 				A99C9B922106FF3F00C3E9CF /* LaunchScreen.storyboard in Resources */,
 				A99C9B8F2106FF3F00C3E9CF /* Assets.xcassets in Resources */,
-				A99C9BAE210703A100C3E9CF /* Constant in Resources */,
 				A99C9B8D2106FF3D00C3E9CF /* Main.storyboard in Resources */,
-				A99C9BB0210703A100C3E9CF /* Utils in Resources */,
-				A99C9BAF210703A100C3E9CF /* AppDelegate in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,13 +437,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A99C9BCE2107097500C3E9CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99C9BDF2107097700C3E9CF /* LaunchScreen.storyboard in Resources */,
+				A99C9BDC2107097700C3E9CF /* Assets.xcassets in Resources */,
+				A99C9BDA2107097500C3E9CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99C9BE52107097700C3E9CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31D953BB2FDCAE27110D97B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-quchuxing/Pods-quchuxing-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quchuxing/Pods-quchuxing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDB2514213F2E78985777694 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quchuxing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A99C9B7E2106FF3D00C3E9CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99C9BC82107087100C3E9CF /* AppDelegate+LaunchView.m in Sources */,
+				A99C9BC22107076A00C3E9CF /* AppDelegate.m in Sources */,
+				A99C9BCB210708C300C3E9CF /* AppDelegate+Libs.m in Sources */,
 				A99C9B952106FF3F00C3E9CF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +515,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A99C9BCC2107097500C3E9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99C9BD72107097500C3E9CF /* ViewController.m in Sources */,
+				A99C9BE22107097700C3E9CF /* main.m in Sources */,
+				A99C9BD42107097500C3E9CF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99C9BE32107097700C3E9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99C9BEC2107097700C3E9CF /* quchuxing_debugTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,6 +540,11 @@
 			isa = PBXTargetDependency;
 			target = A99C9B812106FF3D00C3E9CF /* quchuxing */;
 			targetProxy = A99C9B9B2106FF3F00C3E9CF /* PBXContainerItemProxy */;
+		};
+		A99C9BE92107097700C3E9CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A99C9BCF2107097500C3E9CF /* quchuxing_debug */;
+			targetProxy = A99C9BE82107097700C3E9CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -244,6 +561,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				A99C9B912106FF3F00C3E9CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A99C9BD82107097500C3E9CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A99C9BD92107097500C3E9CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A99C9BDD2107097700C3E9CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A99C9BDE2107097700C3E9CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -292,6 +625,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/quchuxing/Constant/Prefix.h";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -348,6 +682,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/quchuxing/Constant/Prefix.h";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -363,6 +698,7 @@
 		};
 		A99C9BA42106FF3F00C3E9CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DC38ABD82AD3B0A7794AA9 /* Pods-quchuxing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,7 +707,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.quchuxing.quchuxing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quchuxing.quchuxingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +715,7 @@
 		};
 		A99C9BA52106FF3F00C3E9CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C296735412A912A2E6E897F /* Pods-quchuxing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -387,7 +724,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.quchuxing.quchuxing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quchuxing.quchuxingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,6 +766,74 @@
 			};
 			name = Release;
 		};
+		A99C9BEF2107097700C3E9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quchuxing_debug/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quchuxing.quchuxingapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A99C9BF02107097700C3E9CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quchuxing_debug/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quchuxing.quchuxingapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A99C9BF22107097700C3E9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quchuxing_debugTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quchuxing.quchuxing-debugTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quchuxing_debug.app/quchuxing_debug";
+			};
+			name = Debug;
+		};
+		A99C9BF32107097700C3E9CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quchuxing_debugTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quchuxing.quchuxing-debugTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quchuxing_debug.app/quchuxing_debug";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,6 +860,24 @@
 			buildConfigurations = (
 				A99C9BA72106FF3F00C3E9CF /* Debug */,
 				A99C9BA82106FF3F00C3E9CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99C9BEE2107097700C3E9CF /* Build configuration list for PBXNativeTarget "quchuxing_debug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99C9BEF2107097700C3E9CF /* Debug */,
+				A99C9BF02107097700C3E9CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99C9BF12107097700C3E9CF /* Build configuration list for PBXNativeTarget "quchuxing_debugTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99C9BF22107097700C3E9CF /* Debug */,
+				A99C9BF32107097700C3E9CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

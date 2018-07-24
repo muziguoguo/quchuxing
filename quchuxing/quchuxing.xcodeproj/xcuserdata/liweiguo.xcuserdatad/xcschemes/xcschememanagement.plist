@@ -9,6 +9,34 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>quchuxing_debug.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A99C9B812106FF3D00C3E9CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99C9B992106FF3F00C3E9CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99C9BCF2107097500C3E9CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99C9BE62107097700C3E9CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
