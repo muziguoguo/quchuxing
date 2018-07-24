@@ -18,6 +18,7 @@
 #import "Notifications.h"
 #import "Enums.h"
 #import "Urls.h"
+#import "NSDictionary+utils.h"
 
 #pragma mark --三方API密钥
 #ifdef DEBUG

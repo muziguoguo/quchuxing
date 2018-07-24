@@ -22,6 +22,14 @@
 		A99C9BDF2107097700C3E9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99C9BDD2107097700C3E9CF /* LaunchScreen.storyboard */; };
 		A99C9BE22107097700C3E9CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BE12107097700C3E9CF /* main.m */; };
 		A99C9BEC2107097700C3E9CF /* quchuxing_debugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9BEB2107097700C3E9CF /* quchuxing_debugTests.m */; };
+		A99C9C052107856A00C3E9CF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C042107856A00C3E9CF /* NSString+MD5.m */; };
+		A99C9C062107856A00C3E9CF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C042107856A00C3E9CF /* NSString+MD5.m */; };
+		A99C9C0E2107876D00C3E9CF /* SignatureTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C0C2107876D00C3E9CF /* SignatureTool.m */; };
+		A99C9C0F2107876D00C3E9CF /* SignatureTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C0C2107876D00C3E9CF /* SignatureTool.m */; };
+		A99C9C15210788C800C3E9CF /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C14210788C800C3E9CF /* Response.m */; };
+		A99C9C16210788C800C3E9CF /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C14210788C800C3E9CF /* Response.m */; };
+		A99C9C1921078A0700C3E9CF /* NSDictionary+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C1821078A0700C3E9CF /* NSDictionary+utils.m */; };
+		A99C9C1A21078A0700C3E9CF /* NSDictionary+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C9C1821078A0700C3E9CF /* NSDictionary+utils.m */; };
 		CD007984115E1FDD13A73426 /* libPods-quchuxing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79139E3C939EBCAFAFF27459 /* libPods-quchuxing.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +85,14 @@
 		A99C9BFD2107380700C3E9CF /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
 		A99C9BFE2107382D00C3E9CF /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		A99C9C012107387100C3E9CF /* Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		A99C9C032107856A00C3E9CF /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		A99C9C042107856A00C3E9CF /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		A99C9C0C2107876D00C3E9CF /* SignatureTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureTool.m; sourceTree = "<group>"; };
+		A99C9C0D2107876D00C3E9CF /* SignatureTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignatureTool.h; sourceTree = "<group>"; };
+		A99C9C13210788C800C3E9CF /* Response.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		A99C9C14210788C800C3E9CF /* Response.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		A99C9C1721078A0700C3E9CF /* NSDictionary+utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+utils.h"; sourceTree = "<group>"; };
+		A99C9C1821078A0700C3E9CF /* NSDictionary+utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+utils.m"; sourceTree = "<group>"; };
 		F3DC38ABD82AD3B0A7794AA9 /* Pods-quchuxing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quchuxing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quchuxing/Pods-quchuxing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +168,9 @@
 				A99C9BBB2107076900C3E9CF /* Libs */,
 				A99C9BC02107076A00C3E9CF /* Utils */,
 				A99C9BBC2107076900C3E9CF /* Constant */,
+				A99C9C10210787FA00C3E9CF /* CommonModel */,
+				A99C9C112107882A00C3E9CF /* CommonView */,
+				A99C9C122107884100C3E9CF /* CommonVC */,
 				A99C9BB52107076900C3E9CF /* Modules */,
 				A99C9BBD2107076A00C3E9CF /* AppDelegate */,
 				A99C9B8B2106FF3D00C3E9CF /* Main.storyboard */,
@@ -253,6 +272,7 @@
 		A99C9BC02107076A00C3E9CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A99C9C022107830400C3E9CF /* Category */,
 				A99C9BC12107076A00C3E9CF /* APITool */,
 			);
 			path = Utils;
@@ -261,6 +281,7 @@
 		A99C9BC12107076A00C3E9CF /* APITool */ = {
 			isa = PBXGroup;
 			children = (
+				A99C9C0B2107876D00C3E9CF /* NetWork */,
 			);
 			path = APITool;
 			sourceTree = "<group>";
@@ -288,6 +309,49 @@
 				A99C9BED2107097700C3E9CF /* Info.plist */,
 			);
 			path = quchuxing_debugTests;
+			sourceTree = "<group>";
+		};
+		A99C9C022107830400C3E9CF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9C1721078A0700C3E9CF /* NSDictionary+utils.h */,
+				A99C9C1821078A0700C3E9CF /* NSDictionary+utils.m */,
+				A99C9C032107856A00C3E9CF /* NSString+MD5.h */,
+				A99C9C042107856A00C3E9CF /* NSString+MD5.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A99C9C0B2107876D00C3E9CF /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9C0C2107876D00C3E9CF /* SignatureTool.m */,
+				A99C9C0D2107876D00C3E9CF /* SignatureTool.h */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		A99C9C10210787FA00C3E9CF /* CommonModel */ = {
+			isa = PBXGroup;
+			children = (
+				A99C9C13210788C800C3E9CF /* Response.h */,
+				A99C9C14210788C800C3E9CF /* Response.m */,
+			);
+			path = CommonModel;
+			sourceTree = "<group>";
+		};
+		A99C9C112107882A00C3E9CF /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		A99C9C122107884100C3E9CF /* CommonVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonVC;
 			sourceTree = "<group>";
 		};
 		B07E76FF564E86756465AF81 /* Frameworks */ = {
@@ -501,7 +565,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99C9BC82107087100C3E9CF /* AppDelegate+LaunchView.m in Sources */,
+				A99C9C0E2107876D00C3E9CF /* SignatureTool.m in Sources */,
+				A99C9C1921078A0700C3E9CF /* NSDictionary+utils.m in Sources */,
+				A99C9C15210788C800C3E9CF /* Response.m in Sources */,
 				A99C9BC22107076A00C3E9CF /* AppDelegate.m in Sources */,
+				A99C9C052107856A00C3E9CF /* NSString+MD5.m in Sources */,
 				A99C9BCB210708C300C3E9CF /* AppDelegate+Libs.m in Sources */,
 				A99C9B952106FF3F00C3E9CF /* main.m in Sources */,
 			);
@@ -519,9 +587,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99C9C16210788C800C3E9CF /* Response.m in Sources */,
+				A99C9C0F2107876D00C3E9CF /* SignatureTool.m in Sources */,
 				A99C9BD72107097500C3E9CF /* ViewController.m in Sources */,
 				A99C9BE22107097700C3E9CF /* main.m in Sources */,
+				A99C9C062107856A00C3E9CF /* NSString+MD5.m in Sources */,
 				A99C9BD42107097500C3E9CF /* AppDelegate.m in Sources */,
+				A99C9C1A21078A0700C3E9CF /* NSDictionary+utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
