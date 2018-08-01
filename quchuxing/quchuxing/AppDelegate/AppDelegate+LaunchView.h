@@ -10,4 +10,12 @@
 
 @interface AppDelegate (LaunchView)
 
+
+/**
+ 加载引导页
+
+ @param window 主窗口
+ */
+- (void)loadIntroViewInWindow:(UIWindow *)window;
+
 @end

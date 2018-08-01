@@ -55,8 +55,6 @@
     {
         signature = [NSString stringWithFormat:@"%@%@%.0f%@",group,action,timestamp,api_key];
     }
-//    DLog(@"signature:%@",signature);
-//    DLog(@"group:%@ action:%@ auth_token:%@ api_key:%@ timestamp:%.0f",group,action,auth_token,api_key,timestamp);
     return [signature md5Encryption];
 }
 

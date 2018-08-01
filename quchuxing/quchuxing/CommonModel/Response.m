@@ -12,15 +12,12 @@
 
 - (id)initWithDictionary:(NSDictionary *)dic
 {
-    NSInteger flag = 0;
+    StatusCode flag = 0;
     NSObject *data = @"";
     NSObject *common = @"";
     NSString *msg = @"";
-    if ([dic valueForKey:@"code"]) {
-        flag = [[dic valueForKey:@"code"] integerValue];
-    }
     if ([dic valueForKey:@"status"]) {
-        flag = ![[dic valueForKey:@"status"] integerValue];
+        flag = [[dic valueForKey:@"status"] integerValue];
     }
     data = [dic objectValueForKey:@"result" defaultValue:@{}];
     common = [dic objectValueForKey:@"common" defaultValue:nil];

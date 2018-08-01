@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TabBarViewController.h"
+#import "AppDelegate+LaunchView.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    TabBarViewController *tabbarController = [[TabBarViewController alloc] init];
+    [_window setRootViewController:tabbarController];
+    [_window makeKeyAndVisible];
     
+    [self loadIntroViewInWindow:_window];
     
     return YES;
 }

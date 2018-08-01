@@ -9,5 +9,7 @@
 #ifndef Urls_h
 #define Urls_h
 
+#define BaseURL @"https://v1.driver.quchuxing.com.cn"
+
 
 #endif /* Urls_h */

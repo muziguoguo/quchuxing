@@ -14,11 +14,19 @@
 //标明某个函数在某个版本之后被启用，通过新的指定方法替代
 #define QCX_DEPRECATED_WILL_BE_REMOVED_IN_PLEASE_USE(VERSION, METHOD) __attribute__((deprecated("This method has been deprecated and will be removed in QuChuXing " VERSION ". Please use `" METHOD "` instead.")))
 
+// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+#define MAS_SHORTHAND
+// 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#define MAS_SHORTHAND_GLOBALS
+
 #pragma mark --导入常用头文件
 #import "Notifications.h"
 #import "Enums.h"
 #import "Urls.h"
 #import "NSDictionary+utils.h"
+#import "UIView+FrameLayout.h"
+#import <Masonry.h>
+#import "UIView+AutoLayout.h"
 
 #pragma mark --三方API密钥
 #ifdef DEBUG
@@ -54,7 +62,7 @@
 //设备名称
 #define DEVICE_NAME  [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] model]]
 // 应用版本
-#define APPVERISON            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define APPVERISON [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 //当前设备屏幕框架
 #define DEVICE_SCREEN [UIScreen mainScreen].bounds.size.height
 #define DEVICE_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -87,6 +95,7 @@
 #endif
 
 #pragma mark --常用偏移高度
+#define KStatusBarHeighKKt  [UIApplication sharedApplication].statusBarFrame.size.height //状态栏的高度
 #define kNavBarHeight (IS_IPHONE_X?88:64)
 #define kTabBarHeight (IS_IPHONE_X?83:49)
 #define kOriginOffset_Y_Top (IS_IPHONE_X?44:20)
@@ -107,6 +116,18 @@
 //等比例裁剪
 #define Maked0ImageUrl(oriUrl,w,h) [NSString stringWithFormat:@"%@@0e_%dw_%dh_1c_0i_1o_90Q_1x.png",oriUrl,(int)RetinaSize(w),(int)RetinaSize(h)]
 #define RetinaSize(size) (int)([UIScreen mainScreen].scale*size)
+
+#pragma mark --常用颜色定义
+#define kAppMainLightGrayColor  UICOLOR_FROM_RGB(248,248,249,1)
+#define FrenchGrayColor UICOLOR_FROM_RGB(149, 150, 155, 1) //浅灰色
+#define DullGrayColor UICOLOR_FROM_RGB(124, 125, 129, 1)    //深灰色
+#define DarkGrayColor UICOLOR_FROM_RGB(62, 63, 65, 1)  //灰黑色
+#define LineColor UICOLOR_FROM_RGB(244, 244, 246, 1)    //线的颜色
+
+#pragma mark --NSUserDefaultKey
+#define VERSION @"version"  //软件版本
+#define LAUNCHED @"launched"    //是否已经登入过
+#define UUIDIDENTIFER @"uuid"    //记录设备唯一标识
 
 #endif /* Prefix_h */
 

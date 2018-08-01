@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum:NSInteger{
+    kSuccess = 200, //请求成功
+    kUnLogin = -1,  //未登录
+    kServerError = -2, //服务器发生错误
+    kVerifiCodeError = -3,  //验证码错误
+    kParameterError = -4,   //参数错误
+    kDriverAduitFaild = -5  //司机审核未通过
+} StatusCode;
+
+#pragma mark --回调数据模型
 @interface Response : NSObject
 
-@property (assign, nonatomic) NSInteger code;
+@property (assign, nonatomic) StatusCode code;
 @property (strong, nonatomic) NSObject *result;
 @property (strong, nonatomic) NSString *message;
 @property (strong, nonatomic) NSObject *common;

@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AMapFoundation (1.5.3)
+  - AMapLocation (2.6.0):
+    - AMapFoundation (~> 1.4)
   - JSONModel (1.7.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
@@ -21,32 +24,69 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - UMCCommon (1.5.2)
+  - UMCSecurityPlugins (1.0.6)
+  - UMCShare/Core (6.9.4):
+    - UMCCommon
+  - UMCShare/Social/ReducedQQ (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/UI (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - WechatOpenSDK (1.8.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
+  - AMapLocation
   - JSONModel
   - Masonry
   - MBProgressHUD
   - MJRefresh
   - SDWebImage (~> 4.0)
+  - UMCCommon
+  - UMCSecurityPlugins
+  - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedSina
+  - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI
+  - WechatOpenSDK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - AMapFoundation
+    - AMapLocation
     - JSONModel
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - SDWebImage
+    - UMCCommon
+    - UMCSecurityPlugins
+    - UMCShare
+    - WechatOpenSDK
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
+  AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  UMCShare: aa233aecad67979930fe43f3a2f676023b669439
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
 
-PODFILE CHECKSUM: fa310b7f8ad32f0f08dc220decebdd78495a7159
+PODFILE CHECKSUM: 766d00adcf9cc9b319a7b8ae1a553a32632a056d
 
 COCOAPODS: 1.5.3

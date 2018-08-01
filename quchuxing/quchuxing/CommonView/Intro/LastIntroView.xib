@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LastIntroView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LastIntroView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z0-NZ-KrA">
+                    <rect key="frame" x="80" y="462" width="215" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="微信登录">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedWXLoginBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="jeN-7Q-MNL"/>
+                    </connections>
+                </button>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-pS-lUE">
+                    <rect key="frame" x="80" y="582" width="215" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="b7W-jN-w4N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="游客身份进入&gt;&gt;">
+                        <color key="titleColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedVisitLoginBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="XNk-kJ-lca"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-Go-L49">
+                    <rect key="frame" x="80" y="522" width="215" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="手机登录">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedPhoneLoginBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="pXK-MD-acP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="P5v-Go-L49" firstAttribute="centerX" secondItem="3Z0-NZ-KrA" secondAttribute="centerX" id="4FD-xR-omj"/>
+                <constraint firstItem="TI9-pS-lUE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="9dR-JT-B72"/>
+                <constraint firstItem="P5v-Go-L49" firstAttribute="height" secondItem="3Z0-NZ-KrA" secondAttribute="height" id="JUX-Xn-R3m"/>
+                <constraint firstItem="TI9-pS-lUE" firstAttribute="width" secondItem="P5v-Go-L49" secondAttribute="width" id="KLZ-Zy-aY6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TI9-pS-lUE" secondAttribute="bottom" constant="40" id="LZw-Rj-9G0"/>
+                <constraint firstItem="TI9-pS-lUE" firstAttribute="height" secondItem="P5v-Go-L49" secondAttribute="height" id="Lgn-tQ-wqC"/>
+                <constraint firstItem="TI9-pS-lUE" firstAttribute="centerX" secondItem="P5v-Go-L49" secondAttribute="centerX" id="Sm7-gY-OQZ"/>
+                <constraint firstItem="P5v-Go-L49" firstAttribute="top" secondItem="3Z0-NZ-KrA" secondAttribute="bottom" constant="15" id="aJg-CW-fcu"/>
+                <constraint firstItem="TI9-pS-lUE" firstAttribute="top" secondItem="P5v-Go-L49" secondAttribute="bottom" constant="15" id="dOo-TC-Z1L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TI9-pS-lUE" secondAttribute="trailing" constant="80" id="hEh-9a-JpD"/>
+                <constraint firstItem="P5v-Go-L49" firstAttribute="width" secondItem="3Z0-NZ-KrA" secondAttribute="width" id="kzH-fu-fc5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="phoneLoginBtn" destination="P5v-Go-L49" id="ws3-gl-h6m"/>
+                <outlet property="visiLoginBtn" destination="TI9-pS-lUE" id="N38-xG-5bN"/>
+                <outlet property="wxLoginBtn" destination="3Z0-NZ-KrA" id="Vgi-xL-LC9"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

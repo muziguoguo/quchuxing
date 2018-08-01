@@ -10,4 +10,6 @@
 
 @interface AppDelegate (Libs)
 
+- (void)settingLibs;
+
 @end
