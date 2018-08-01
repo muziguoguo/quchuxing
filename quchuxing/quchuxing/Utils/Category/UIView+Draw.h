@@ -17,7 +17,7 @@
  @param radius 圆角大小
  @param borderWidth 边框宽度
  @param borderColor 边框颜色
- @param backgroundColor 整个区域背景色
+ @param backgroundColor 背景色
  */
 - (void)drawCornerWithRadius:(CGFloat)radius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *_Nullable)borderColor backgroundColor:(UIColor *_Nullable)backgroundColor;
 

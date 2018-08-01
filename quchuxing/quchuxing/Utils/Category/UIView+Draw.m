@@ -11,30 +11,19 @@
 @implementation UIView (Draw)
 
 #pragma mark --绘制圆角和边框
-- (void)drawCornerWithRadius:(CGFloat)radius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *_Nullable)borderColor backgroundColor:(UIColor *_Nullable)backgroundColor{
-    CGSize imageSize = self.bounds.size;
-    self.layer.shouldRasterize = YES;  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIGraphicsBeginImageContext(imageSize);
-    
-        if (borderWidth!=0 || borderColor) {
-            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(1, 1, imageSize.width-2, imageSize.height-2) cornerRadius:radius];
-            [path setLineWidth:borderWidth];
-            [(borderColor?borderColor:[UIColor clearColor]) setStroke];
-            [path stroke];
-        }
-        
-        if (radius!=0 && backgroundColor) {
-            UIBezierPath *rectPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(1, 1, imageSize.width-2, imageSize.height-2) cornerRadius:radius];
-            [(backgroundColor?backgroundColor:[UIColor clearColor]) setFill];
-            [rectPath fill];
-        }
-        
-        UIImage* rectImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.layer.contents = (__bridge id)rectImage.CGImage;
-        });
-    });
+- (void)drawCornerWithRadius:(CGFloat)radius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *_Nullable)borderColor backgroundColor:(UIColor * _Nullable)backgroundColor{
+    CAShapeLayer *borderLayer = [CAShapeLayer layer];
+    borderLayer.bounds = self.bounds;
+    borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:borderLayer.bounds cornerRadius:radius].CGPath;
+    if (borderWidth != 0) {
+        borderLayer.lineWidth = borderWidth;
+        borderLayer.strokeColor = borderColor.CGColor;
+    }
+    if (backgroundColor!=nil) {
+        borderLayer.fillColor = backgroundColor.CGColor;
+    }
+    [self.layer insertSublayer:borderLayer atIndex:0];
 
 }
 

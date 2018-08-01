@@ -10,8 +10,22 @@
 
 @interface AlertView : UILabel
 
+
+/**
+ 单例方法
+
+ @return 单例对象
+ */
 + (AlertView *)createSingleCase;
 
-- (void)showAlertMessage:(NSString *)message withCenter:(CGPoint)center;
+
+/**
+ 展示提示框
+
+ @param message 提示内容
+ @param view  所在视图
+ @param center 提示框中心位置。可传入CGPointZero，则显示在屏幕中心
+ */
+- (void)showAlertMessage:(NSString *)message inView:(UIView *)view withCenter:(CGPoint)center;
 
 @end

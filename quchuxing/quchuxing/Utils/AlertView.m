@@ -9,8 +9,16 @@
 #import "AlertView.h"
 #import "NSString+Utils.h"
 
+@interface AlertView()
+{
+    CALayer *_backLayer;
+}
+
+@end
+
 @implementation AlertView
 
+#pragma mark --单例方法
 + (AlertView *)createSingleCase{
     static AlertView *alertView = nil;
     static dispatch_once_t onceToken;
@@ -22,35 +30,37 @@
     return alertView;
 }
 
+#pragma mark --初始化函数
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = FrenchGrayColor;
         self.textColor = UIColor.whiteColor;
         self.textAlignment = NSTextAlignmentCenter;
-        self.font = [UIFont systemFontOfSize:18];
+        self.font = [UIFont systemFontOfSize:16];
+        self.backgroundColor = FrenchGrayColor;
         self.layer.cornerRadius = 6;
         self.layer.masksToBounds = YES;
     }
     return self;
 }
 
-- (void)showAlertMessage:(NSString *)message withCenter:(CGPoint)center{
-    CGFloat width = [message widthWithHeigth:32 font:[UIFont systemFontOfSize:18]];
+#pragma mark --展示提示框
+- (void)showAlertMessage:(NSString *)message inView:(UIView *)view withCenter:(CGPoint)center{
+    CGFloat width = [message widthWithHeigth:32 font:[UIFont systemFontOfSize:16]];
     if (CGPointEqualToPoint(center, CGPointZero)) {
-        self.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-width+6)/2, 200, width+6, 32);
+        self.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-(width+10))/2, 200, width+10, 32);
     }
     else{
-        self.frame = CGRectMake(center.x-(width+6)/2, center.y-32/2, width+6, 32);
+        self.frame = CGRectMake(center.x-(width+10)/2, center.y-32/2, width+10, 32);
     }
     self.text = message;
-    UIWindow *window = [AlertView lastWindow];
-    [window addSubview:self];
+    [view addSubview:self];
     __weak typeof(self) weakSelf = self; dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [weakSelf removeFromSuperview];
     });
 }
 
+#pragma mark--获取主窗口（未用）
 + (UIWindow *)lastWindow
 {
     NSArray *windows = [UIApplication sharedApplication].windows;
@@ -65,6 +75,7 @@
     return [UIApplication sharedApplication].keyWindow;
 }
 
+#pragma mark --完整单例构建
 + (instancetype)allocWithZone:(struct _NSZone *)zone{
     return nil;
 }

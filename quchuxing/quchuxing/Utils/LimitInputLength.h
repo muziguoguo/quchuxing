@@ -12,13 +12,13 @@
 
 @interface UITextField (LimitCount)
 
-@property (nonatomic, strong) NSNumber *limitCount;
+@property (nonatomic, strong) NSNumber *limitCount;     //字数限制
 
 @end
 
 @interface UITextView (LimitCount)
 
-@property (nonatomic, strong) NSNumber *limitCount;
+@property (nonatomic, strong) NSNumber *limitCount;     //字数限制
 
 @end
 
