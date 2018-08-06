@@ -10,16 +10,19 @@
 
 @interface UIView (Draw)
 
+@property (nonatomic, assign) CAShapeLayer *borderLayer;   //是否存在边框和圆角
+@property (nonatomic, assign) CAGradientLayer *gradientLayer;  //是否存在渐变色
 
 /**
  为UIView动态绘制圆角及边框
 
  @param radius 圆角大小
+ @param cornerDirect 圆角方向
  @param borderWidth 边框宽度
  @param borderColor 边框颜色
  @param backgroundColor 背景色
  */
-- (void)drawCornerWithRadius:(CGFloat)radius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *_Nullable)borderColor backgroundColor:(UIColor *_Nullable)backgroundColor;
+- (void)drawCornerWithRadius:(CGFloat)radius connerDirect:(UIRectCorner)cornerDirect borderWidth:(CGFloat)borderWidth borderColor:(UIColor *_Nullable)borderColor backgroundColor:(UIColor * _Nullable)backgroundColor;
 
 
 

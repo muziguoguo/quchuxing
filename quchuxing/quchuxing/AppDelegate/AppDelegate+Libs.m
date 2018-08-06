@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate+Libs.h"
+#import "NetTool.h"
 #import <UMShare/UMShare.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
@@ -15,6 +16,9 @@
 
 #pragma mark --配置三方
 - (void)settingLibs{
+    //配置网络
+    [NetTool initAFNetframework];
+    
     //向微信注册
     [WXApi registerApp:WXAppKey];
     

@@ -56,7 +56,7 @@
 - (void)loadData{
     NSArray *nomalImages = @[@"btn_home", @"btn_find", @"btn_follow", @"btn_news", @"btn_me"];
     NSArray *selectImages = @[@"btn_home_on", @"btn_find_on", @"btn_follow_on", @"btn_news_on", @"btn_me_on"];
-    NSArray *titles = @[@"首页", @"发现", @"关注", @"消息", @"我"];
+    NSArray *titles = @[@"主页", @"发现", @"关注", @"消息", @"我"];
     
     [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj.tabBarItem setImage:[[UIImage imageNamed:nomalImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];

@@ -6,6 +6,8 @@
 //  Copyright © 2018年 趣出行. All rights reserved.
 //
 
+
+#pragma mark --选择条
 #import <UIKit/UIKit.h>
 
 @protocol SelectBarViewDelegate<NSObject>
@@ -38,5 +40,11 @@
  @return 实例
  */
 - (instancetype)initWithItems:(NSArray<NSString *> *)items withTitleFont:(UIFont *)font normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor;
+
+
+/**
+ 选中第一个item
+ */
+- (void)selectFirstItem;
 
 @end

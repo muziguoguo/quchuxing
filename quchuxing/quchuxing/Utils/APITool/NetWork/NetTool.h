@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Response;
-
 
 @interface NetTool : NSObject
 
@@ -33,7 +31,7 @@
  @param success 请求成功回调
  @param failure 请求失败回调
  */
-+ (void)httpPostRequest:(NSString *)url WithFormdata:(NSMutableDictionary *)formData WithSuccess:(void (^)(Response *response))success failure:(void (^)(NSError *error))failure;
++ (void)httpPostRequest:(NSString *)url WithFormdata:(NSMutableDictionary *)formData WithSuccess:(void (^)(id response))success failure:(void (^)(NSError *error))failure;
 
 @end
 

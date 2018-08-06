@@ -24,7 +24,20 @@
     
     [self loadIntroViewInWindow:_window];
     
+    [self layoutForVersion11];
+    
     return YES;
+}
+
+#pragma mark --适配tableView和scrollView在iOS11中的问题
+- (void)layoutForVersion11{
+    //适配iOS11的tableView问题
+    [UITableView appearance].estimatedRowHeight = 0;
+    [UITableView appearance].estimatedSectionFooterHeight = 0;
+    [UITableView appearance].estimatedSectionHeaderHeight = 0;
+    if (@available(iOS 11, *)) {
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
 }
 
 

@@ -126,7 +126,6 @@
         [self addSubview:itemBtn];
         [_itemViewArray addObject:itemBtn];
     }
-    [self itemBtnResponse:_itemViewArray[0]];
 }
 
 #pragma mark --重写布局方法
@@ -137,6 +136,11 @@
     [_itemViewArray enumerateObjectsUsingBlock:^(UIButton *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.frame = CGRectMake(weakSelf.cur_w/itemCount*idx, 0, weakSelf.cur_w/itemCount, weakSelf.cur_h);
     }];
+}
+
+#pragma mark --选中第一个item
+- (void)selectFirstItem{
+    [self itemBtnResponse:_itemViewArray[0]];
 }
 
 #pragma mark --按钮响应事件

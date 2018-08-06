@@ -9,7 +9,11 @@
 #ifndef Urls_h
 #define Urls_h
 
-#define BaseURL @"https://v1.driver.quchuxing.com.cn"
+#define kBaseURL @"https://v1.driver.quchuxing.com.cn"   //服务器地址
+
+#define kApi_Post_SendCaptcha [NSString stringWithFormat:@"%@/sendCaptcha", kBaseURL]
+
+#define kApi_Post_Login [NSString stringWithFormat:@"%@/login", kBaseURL]
 
 
 #endif /* Urls_h */

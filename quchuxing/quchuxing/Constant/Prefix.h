@@ -22,11 +22,17 @@
 #pragma mark --导入常用头文件
 #import "Notifications.h"
 #import "Enums.h"
-#import "Urls.h"
+#import "APIClient.h"
 #import "NSDictionary+utils.h"
 #import "UIView+FrameLayout.h"
 #import <Masonry.h>
 #import "UIView+AutoLayout.h"
+#import <MBProgressHUD.h>
+#import <JSONModel.h>
+#import "UserModel.h"
+#import "UserDefault.h"
+#import "UIView+Draw.h"
+
 
 #pragma mark --三方API密钥
 #ifdef DEBUG
@@ -118,7 +124,7 @@
 #define RetinaSize(size) (int)([UIScreen mainScreen].scale*size)
 
 #pragma mark --常用颜色定义
-#define kAppMainLightGrayColor  UICOLOR_FROM_RGB(248,248,249,1)
+#define kAppMainLightGrayColor  UICOLOR_FROM_RGB(245,245,247,1)
 #define FrenchGrayColor UICOLOR_FROM_RGB(149, 150, 155, 1) //浅灰色
 #define DullGrayColor UICOLOR_FROM_RGB(124, 125, 129, 1)    //深灰色
 #define DarkGrayColor UICOLOR_FROM_RGB(62, 63, 65, 1)  //灰黑色

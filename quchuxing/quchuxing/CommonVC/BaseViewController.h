@@ -6,6 +6,7 @@
 //  Copyright © 2018年 趣出行. All rights reserved.
 //
 
+#pragma mark --控制器基类
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController

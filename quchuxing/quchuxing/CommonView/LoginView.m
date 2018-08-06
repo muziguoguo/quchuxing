@@ -11,6 +11,7 @@
 #import "LimitInputLength.h"
 #import "UIView+Draw.h"
 #import "AlertView.h"
+#import "UserModel.h"
 
 #define PhoneNumberLimit 11 //电话号码长度限制
 #define VerCodeLimit 6      //验证码长度限制
@@ -20,6 +21,7 @@
     bool _isValidMobile; //手机号是否合法
     UILabel *_loginLable;   //登录按钮标签
     NSInteger _seconds; //重发验证码秒数
+    NSTimer *_timer;    //验证码读秒计时器
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *topTitleLabel;
@@ -46,7 +48,7 @@
     if (loginType) {
         _loginType = loginType;
         _topTitleLabel.text = loginType==kLoginWithWeChat?@"绑定手机号":@"注册/登录";
-        if (loginType == kUnLogin && [WXApi isWXAppInstalled]) {
+        if (loginType == kWithoutLogin && [WXApi isWXAppInstalled]) {
             [_wxLoginView setHidden:NO];
         }
     }
@@ -77,7 +79,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     [_loginBtn gradualBackgroundColorWithCornerRadius:8 borderWidth:0 colors:nil locations:nil];
-    [_unLoginLable drawCornerWithRadius:8 borderWidth:0 borderColor:nil backgroundColor:UICOLOR_FROM_RGB(246, 246, 246, 1)];
+    [_unLoginLable drawCornerWithRadius:8 connerDirect:UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight borderWidth:0 borderColor:nil backgroundColor:UICOLOR_FROM_RGB(246, 246, 246, 1)];
 }
 
 #pragma mark --设置登录按钮是否可以点击
@@ -131,7 +133,32 @@
 
 #pragma mark --登录按钮响应事件
 - (IBAction)clickedLoginBtn:(UIButton *)sender {
-    
+    [_phoneNumberField resignFirstResponder];
+    [_passwordField resignFirstResponder];
+    NSString *idfa = [[NSUserDefaults standardUserDefaults] valueForKey:UUIDIDENTIFER];
+    NSInteger phoneNumber = [_phoneNumberField.text integerValue];
+    NSInteger verCode = [_passwordField.text integerValue];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    __WeakSelf__ weakSelf = self;
+    [APIClient networkPostLoginWithPhone:phoneNumber captcha:verCode idfa:idfa success:^(id response) {
+        DLog(@"%@", response);
+        if ([response[@"status"] integerValue] == kSuccess) {
+            [hud hideAnimated:YES];
+            [[NSNotificationCenter defaultCenter] postNotificationName:LoginInNotification object:nil];
+            UserModel *user = [[UserModel alloc] initWithDic:response];
+            DLog(@"%@", user);
+            [[UserDefault sharedUserDefault] setUserInfo:user];
+            if (weakSelf.dismissVC) {
+                weakSelf.dismissVC();
+            }
+        }
+        else{
+            hud.label.text = [APIClient errorMessageWithResponse:response];
+            [hud hideAnimated:YES afterDelay:0.7];
+        }
+    } failure:^(NSError *error) {
+        [hud hideAnimated:YES];
+    }];
 }
 
 #pragma mark --获取验证码按钮响应事件
@@ -139,17 +166,15 @@
     _seconds = 60;
     self.getCodeEnable = NO;
     __WeakSelf__ weakTarget = self;
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:weakTarget selector:@selector(timerResponse:) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:weakTarget selector:@selector(timerResponse:) userInfo:nil repeats:YES];
+    [self sendVerCode];
 }
 
 #pragma mark --计时器响应事件
 - (void)timerResponse:(NSTimer *)sender{
     _seconds--;
     if (_seconds == 0) {
-        [_getVerCodeBtn setTitle:@"重新发送验证码" forState:UIControlStateNormal];
-        [self setGetCodeEnable:YES];
-        _seconds = 60;
-        [sender invalidate];
+        [self invalidateTimer];
         return;
     }
     NSString *title = [NSString stringWithFormat:@"%lds", _seconds];
@@ -176,6 +201,24 @@
         [[AlertView createSingleCase] showAlertMessage:@"请输入正确的手机号" inView:self withCenter:_passwordField.center];
         return NO;
     }
+}
+
+#pragma mark --发送验证码请求
+- (void)sendVerCode{
+    NSInteger phonenumber = [_phoneNumberField.text integerValue];
+    [APIClient networkPostGetCaptchaWithPhone:phonenumber success:^(id response) {
+        DLog(@"sendCode:%@", response);
+    } failure:^(NSError *error) {
+        DLog(@"error:%@", error);
+    }];
+}
+
+#pragma mark --处理验证码读秒计时器终止
+- (void)invalidateTimer{
+    [_getVerCodeBtn setTitle:@"重新发送验证码" forState:UIControlStateNormal];
+    [self setGetCodeEnable:YES];
+    _seconds = 60;
+    [_timer invalidate];
 }
 
 #pragma mark --判断手机号是否合法
