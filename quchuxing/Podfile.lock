@@ -14,8 +14,15 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AMap3DMap (6.3.1):
+    - AMapFoundation (~> 1.5)
   - AMapFoundation (1.5.3)
-  - AMapLocation (2.6.0):
+  - AMapLocation (2.6.1):
+    - AMapFoundation (~> 1.4)
+  - AMapNavi (6.2.0):
+    - AMap3DMap (~> 6.2)
+    - AMapFoundation (~> 1.5)
+  - AMapSearch (6.1.1):
     - AMapFoundation (~> 1.4)
   - JSONModel (1.7.0)
   - Masonry (1.1.0)
@@ -45,6 +52,8 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - AMapLocation
+  - AMapNavi
+  - AMapSearch
   - JSONModel
   - Masonry
   - MBProgressHUD
@@ -61,8 +70,11 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - AMap3DMap
     - AMapFoundation
     - AMapLocation
+    - AMapNavi
+    - AMapSearch
     - JSONModel
     - Masonry
     - MBProgressHUD
@@ -75,8 +87,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AMap3DMap: 7e1b2f2a1628a584f085d7f158d7c9835837e8c2
   AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
-  AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
+  AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
+  AMapNavi: bb43c7ac8f85197c562e89b39af22e7c85182d95
+  AMapSearch: 3dcbf85c403a2a0fe0eda5318caabc272b31f5e1
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -87,6 +102,6 @@ SPEC CHECKSUMS:
   UMCShare: aa233aecad67979930fe43f3a2f676023b669439
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
 
-PODFILE CHECKSUM: 766d00adcf9cc9b319a7b8ae1a553a32632a056d
+PODFILE CHECKSUM: ec27f8c15e85a813438c8970ae6cf51865534b52
 
 COCOAPODS: 1.5.3

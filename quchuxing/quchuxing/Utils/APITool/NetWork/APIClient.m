@@ -13,9 +13,9 @@
 @implementation APIClient
 
 #pragma mark --请求错误信息
-+ (NSString *)errorMessageWithResponse:(id)response{
++ (NSString *)errorMessageWithStatusCode:(NSInteger)statusCode{
     NSString *message = nil;
-    switch ([response[@"status"] integerValue]) {
+    switch (statusCode) {
         case kSuccess:
             message = @"请求成功";
             break;
@@ -45,6 +45,7 @@
     NSMutableDictionary *formData = [NSMutableDictionary dictionary];
     [formData setValue:@(phone) forKey:@"phone"];
     [NetTool httpPostRequest:kApi_Post_SendCaptcha WithFormdata:formData WithSuccess:^(id response) {
+        DLog(@"--------url:%@", kApi_Post_SendCaptcha);
         success(response);
     } failure:^(NSError *error) {
         failure(error);
@@ -58,6 +59,21 @@
     [formData setValue:@(captcha) forKey:@"captcha"];
     [formData setValue:idfa forKey:@"idfa"];
     [NetTool httpPostRequest:kApi_Post_Login WithFormdata:formData WithSuccess:^(id response) {
+        if (success) {
+            success(response);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
+#pragma mark --获取首页展示列表
++ (void)networkPostHomeListWithToken:(NSString *)token success:(void (^)(id))success failure:(void (^)(NSError *))failure{
+    NSMutableDictionary *formData = [NSMutableDictionary dictionary];
+    [formData setValue:token forKey:@"token"];
+    [NetTool httpPostRequest:kApi_Post_ListOfHome WithFormdata:formData WithSuccess:^(id response) {
         if (success) {
             success(response);
         }

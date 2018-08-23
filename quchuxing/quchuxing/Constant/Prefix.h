@@ -44,7 +44,7 @@
 #elif BETA
 #define RYAppKey @"mgb7ka1nm3p8g"
 #define RYAppSecret @"Yt0q6VnaRtr"
-#elif REALEASE
+#else
 #define RYAppKey @"mgb7ka1nm3p8g"
 #define RYAppSecret @"Yt0q6VnaRtr"
 #endif
@@ -101,7 +101,7 @@
 #endif
 
 #pragma mark --常用偏移高度
-#define KStatusBarHeighKKt  [UIApplication sharedApplication].statusBarFrame.size.height //状态栏的高度
+#define KStatusBarHeight  [UIApplication sharedApplication].statusBarFrame.size.height //状态栏的高度
 #define kNavBarHeight (IS_IPHONE_X?88:64)
 #define kTabBarHeight (IS_IPHONE_X?83:49)
 #define kOriginOffset_Y_Top (IS_IPHONE_X?44:20)
@@ -128,7 +128,7 @@
 #define FrenchGrayColor UICOLOR_FROM_RGB(149, 150, 155, 1) //浅灰色
 #define DullGrayColor UICOLOR_FROM_RGB(124, 125, 129, 1)    //深灰色
 #define DarkGrayColor UICOLOR_FROM_RGB(62, 63, 65, 1)  //灰黑色
-#define LineColor UICOLOR_FROM_RGB(244, 244, 246, 1)    //线的颜色
+#define LineColor UICOLOR_FROM_RGB(232, 232, 235, 1)    //线的颜色
 
 #pragma mark --NSUserDefaultKey
 #define VERSION @"version"  //软件版本

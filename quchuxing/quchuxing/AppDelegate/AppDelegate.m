@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
 #import "AppDelegate+LaunchView.h"
+#import "AppDelegate+Libs.h"
+#import "AMapLocationTool.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +20,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    DLog(@"idfa:%@", [[NSUserDefaults standardUserDefaults] valueForKey:UUIDIDENTIFER])
     TabBarViewController *tabbarController = [[TabBarViewController alloc] init];
     [_window setRootViewController:tabbarController];
     [_window makeKeyAndVisible];
     
+    [self settingLibs];
+    
     [self loadIntroViewInWindow:_window];
     
     [self layoutForVersion11];
+    
     
     return YES;
 }
@@ -55,6 +61,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [[AMapLocationTool sharedAMapLocation] startLocationWithSuccess:nil failure:nil];
 }
 
 

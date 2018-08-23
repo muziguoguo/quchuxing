@@ -23,10 +23,10 @@ typedef enum:NSInteger{
 /**
  获取请求错误码信息
 
- @param response 请求回执数据
+ @param statusCode 状态码
  @return 错误描述
  */
-+ (NSString *)errorMessageWithResponse:(id)response;
++ (NSString *)errorMessageWithStatusCode:(NSInteger)statusCode;
 
 /**
  获取验证码
@@ -54,5 +54,16 @@ typedef enum:NSInteger{
                              idfa:(NSString *_Nonnull)idfa
                           success:(void (^)(id response))success
                           failure:(void (^)(NSError *error))failure;
+
+/**
+ 首页展示列表
+
+ @param token 用户令牌
+ @param success 请求成功回调
+ @param failure 请求失败回调
+ */
++ (void)networkPostHomeListWithToken:(NSString *_Nonnull)token
+                             success:(void (^)(id response))success
+                             failure:(void (^)(NSError *error))failure;
 
 @end

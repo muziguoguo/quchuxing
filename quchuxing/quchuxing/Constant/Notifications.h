@@ -15,8 +15,11 @@
 
 #define LoginOutNotification @"LoginOutNotification"   //用户退出登录通知
 
-#define LocationUpdateSuccess @"LocationUpdateSuccess"  //定位更新成功通知
+#define StartLocationNotification @"StartLocationNotification"  //开始定位通知
 
-#define LocationUpdateFailure @"LocationUpdateFailure"  //定位更新失败通知
+#define LocationUpdateSuccessNotification @"LocationUpdateSuccessNotification"  //定位更新成功通知
+
+#define LocationUpdateFailureNotification @"LocationUpdateFailureNotification"  //定位更新失败通知
+
 
 #endif /* Notifications_h */

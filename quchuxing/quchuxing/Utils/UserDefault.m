@@ -50,9 +50,21 @@
     return [[UserModel alloc] initWithDic:userInfoDic];
 }
 
+- (void)setPhoneNumber:(NSNumber *)phoneNumber{
+    if (phoneNumber) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:phoneNumber forKey:@"phoneNumber"];
+        [defaults synchronize];
+    }
+}
+
+- (NSNumber *)phoneNumber{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"phoneNumber"];
+}
+
 #pragma mark --获取全部key
 - (NSArray *)allKey{
-    return @[@"userInfo"];
+    return @[@"userInfo", @"phoneNumber"];
 }
 
 #pragma mark --移除用户全部数据

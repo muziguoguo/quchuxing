@@ -11,5 +11,10 @@
 #ifndef Enums_h
 #define Enums_h
 
+typedef enum{
+    kDriverPage,    //司机页
+    kPassengerPage  //乘客页
+} ViewType;
+
 
 #endif /* Enums_h */

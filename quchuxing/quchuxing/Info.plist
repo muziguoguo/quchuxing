@@ -80,6 +80,11 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>是否允许趣出行访问您的相机？</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

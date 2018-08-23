@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeTopView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeTopView">
+            <rect key="frame" x="0.0" y="0.0" width="468" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rq-GO-rgT">
+                    <rect key="frame" x="0.0" y="47.5" width="468" height="185.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyA-XW-698">
+                            <rect key="frame" x="141" y="35" width="186" height="32"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="XvJ-qs-EPK"/>
+                                <constraint firstAttribute="height" constant="32" id="iLg-i1-0wF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="赚钱秘籍">
+                                <color key="titleColor" red="0.9882352941176471" green="0.58823529411764708" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedMakeMoneyBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="by3-5H-yxg"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基于区块链技术连接每位拼车人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-91-8Gk">
+                            <rect key="frame" x="0.0" y="0.0" width="468" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="GSS-y2-eDg"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="jMg-pS-ocE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="vTe-91-8Gk" firstAttribute="top" secondItem="zyA-Bz-54g" secondAttribute="top" id="Fri-10-AbT"/>
+                        <constraint firstItem="dyA-XW-698" firstAttribute="leading" secondItem="zyA-Bz-54g" secondAttribute="leading" constant="141" id="KdR-u6-tap"/>
+                        <constraint firstItem="zyA-Bz-54g" firstAttribute="trailing" secondItem="dyA-XW-698" secondAttribute="trailing" constant="141" id="Vos-Hv-dwi"/>
+                        <constraint firstItem="dyA-XW-698" firstAttribute="top" secondItem="vTe-91-8Gk" secondAttribute="bottom" constant="15" id="g4Z-Wn-4YE"/>
+                        <constraint firstItem="vTe-91-8Gk" firstAttribute="leading" secondItem="zyA-Bz-54g" secondAttribute="leading" id="gGc-MG-2KC"/>
+                        <constraint firstItem="vTe-91-8Gk" firstAttribute="trailing" secondItem="zyA-Bz-54g" secondAttribute="trailing" id="yS7-cs-aM7"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="zyA-Bz-54g"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="趣出行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwN-BU-Nl0">
+                    <rect key="frame" x="0.0" y="14.5" width="468" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Lo6-bg-Jsg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="SwN-BU-Nl0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14.5" id="PPk-HP-lUm"/>
+                <constraint firstItem="8rq-GO-rgT" firstAttribute="top" secondItem="SwN-BU-Nl0" secondAttribute="bottom" constant="9" id="b2l-ba-oNO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8rq-GO-rgT" secondAttribute="trailing" id="fmh-63-kmy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SwN-BU-Nl0" secondAttribute="trailing" id="k4M-NS-Xqp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8rq-GO-rgT" secondAttribute="bottom" id="kLP-dx-POY"/>
+                <constraint firstItem="SwN-BU-Nl0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ka4-f7-OtL"/>
+                <constraint firstItem="8rq-GO-rgT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wmQ-rE-8xG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="makeMoneyBtn" destination="dyA-XW-698" id="a04-rY-fXj"/>
+                <outlet property="unLoginView" destination="8rq-GO-rgT" id="O0V-uK-C9H"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="-139.5"/>
+        </view>
+    </objects>
+</document>

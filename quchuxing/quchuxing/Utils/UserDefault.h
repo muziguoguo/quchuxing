@@ -13,6 +13,7 @@
 @interface UserDefault : NSObject
 
 @property (nonatomic, strong) UserModel *userInfo;  //根据有无判断是否存在登录用户
+@property (nonatomic, strong) NSNumber *phoneNumber;   
 
 /**
  获取用户数据单例对象
